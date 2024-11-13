@@ -124,4 +124,83 @@ Fungsi tampilkan_data() ini akan menampilkan semua data mahasiswa yang ada di da
 
 ### Berikut penjelasannya
 
+Potongan kode ini berfungsi untuk meminta pengguna memasukkan data mahasiswa secara berulang hingga pengguna memilih untuk berhenti. Berikut penjelasannya:
 
+### 1. Loop Tak Terbatas dengan while True:
+
+while True:
+
+Bagian ini membuat loop tak terbatas yang akan terus berjalan hingga ditemukan perintah break untuk menghentikan loop.
+
+
+### 2. Memanggil Fungsi tambah_data():
+
+tambah_data()
+
+Di dalam loop, fungsi tambah_data() dipanggil setiap kali. Fungsi ini berfungsi untuk meminta pengguna memasukkan data mahasiswa, yang kemudian ditambahkan ke dalam list data_mahasiswa.
+
+
+### 3. Meminta Konfirmasi untuk Melanjutkan atau Berhenti:
+
+lanjut = input("Tambah data(y/t)? ")
+if lanjut.lower() != 'y':
+    break
+
+Setelah menambahkan data mahasiswa, program akan menanyakan kepada pengguna apakah ingin menambah data lagi. Jika pengguna memasukkan karakter selain 'y' (atau 'Y'), loop akan dihentikan menggunakan break. Fungsi lanjut.lower() digunakan untuk mengubah input menjadi huruf kecil, sehingga input 'Y' atau 'y' dianggap sama.
+
+
+### 4. Menampilkan Data Mahasiswa:
+
+tampilkan_data()
+
+Setelah keluar dari loop, fungsi tampilkan_data() dipanggil untuk menampilkan seluruh data mahasiswa yang telah dimasukkan dalam format tabel.
+
+### Berikut hasil dari program tersebut
+
+![Gambar4](https://github.com/Raihanardiansyah/Labspy04/blob/main/ss/hasil.png?raw=true)
+
+### Dan berikut adalah flowchart dari programnya
+
+![Gambar5](https://github.com/Raihanardiansyah/Labspy04/blob/main/ss/Flowchart.png?raw=true)
+
+Flowchart ini menjelaskan alur proses untuk membaca data mahasiswa, menghitung nilai akhir berdasarkan bobot nilai tugas, UTS, dan UAS, dan menampilkan hasilnya. Berikut adalah penjelasan dari masing-masing langkah pada flowchart:
+
+1. Start: Flowchart dimulai dari simbol Start, menandakan awal dari proses.
+
+2. Input Data Mahasiswa:
+
+Proses ini ditandai dengan simbol paralelogram yang berlabel Read(Nama, NIM, Nilai Tugas, Nilai UTS, Nilai UAS).
+
+Pada tahap ini, program meminta pengguna untuk memasukkan data mahasiswa, yaitu Nama, NIM, Nilai Tugas, Nilai UTS, dan Nilai UAS.
+
+3. Menanyakan Ingin Menambah Data atau Tidak:
+
+Simbol decision berbentuk belah ketupat berisi pertanyaan If(Menambahkan Data Mahasiswa (Y/T)?).
+
+Program menanyakan kepada pengguna apakah ingin menambah data mahasiswa lagi atau tidak.
+
+Jika Jawaban YA (Y):
+
+Program kembali ke proses awal untuk membaca data mahasiswa berikutnya.
+
+Jika Jawaban TIDAK (T):
+
+Program melanjutkan ke proses perhitungan nilai akhir.
+
+4. Menghitung Nilai Akhir:
+
+Simbol proses berbentuk persegi panjang berisi rumus untuk menghitung Nilai Akhir.
+
+Nilai Akhir dihitung dengan rumus:
+
+\text{Nilai Akhir} = (30\% \times \text{Nilai Tugas}) + (35\% \times \text{Nilai UTS}) + (35\% \times \text{Nilai UAS})
+
+5. Menampilkan Nilai Akhir:
+
+Simbol paralelogram ini berlabel Write(Nilai Akhir).
+
+Setelah menghitung nilai akhir, program menampilkan hasil perhitungan tersebut.
+
+6. End:
+
+Simbol End menandakan akhir dari proses flowchart ini.
